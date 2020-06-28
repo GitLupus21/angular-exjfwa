@@ -1,1 +1,10 @@
-cart component works
+<h2>Shopping Cart</h2>
+
+<div *ngIf="items.length==0">
+  Dein Shopping Cart ist aktuell leer.
+</div>
+<div *ngFor="let item of items; index as itemId">
+  <span>#{{ itemId+1 }}: </span>
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
+</div>
