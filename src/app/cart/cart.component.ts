@@ -9,11 +9,16 @@ import { CartService } from "../cart.service";
 })
 export class CartComponent implements OnInit {
   items;
+  sum: number = 0;
 
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
     this.items = this.cartService.getItems();
+  }
+
+  function getItemPriceSum(): number {
+    return this.cartService.getItemPricesSum();
   }
 
 }

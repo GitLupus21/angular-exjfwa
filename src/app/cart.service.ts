@@ -26,4 +26,12 @@ export class CartService {
    getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
+
+  getItemPricesSum(): number {
+    let sum: number = 0;
+    for (let i=0;  i< this.items.length; i++) {
+      sum += this.items[i].price;
+    }
+    return sum;
+  }
 }
