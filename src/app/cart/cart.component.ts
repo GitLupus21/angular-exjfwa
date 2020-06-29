@@ -17,7 +17,7 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.getItems();
   }
 
-  function getItemPriceSum(): number {
+  getItemPriceSum(): number {
     return this.cartService.getItemPricesSum();
   }
 
